@@ -54,11 +54,12 @@ function App() {
                     .start();
                 }}
                 options={{
+                  wrapperClassName: "text-[white]",
                   cursor: "​●",
                   loop: false,
                   delay: 50,
                   deleteSpeed: Infinity,
-                  cursorClassName: "text-[white] ml-2",
+                  cursorClassName: "text-[white] ml-2 mt-1 text-[40px]",
                 }}
               />
             )}
