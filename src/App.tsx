@@ -28,7 +28,7 @@ function App() {
   }, [typingDone, messages.length]);
 
   return (
-    <div className="bg-black w-full h-screen flex">
+    <div className="flex w-full h-screen bg-black">
       <div className="bg-purple-900 relative hidden flex-1 flex-col justify-center px-5 pt-8 text-[#FE7600] dark:text-[#D292FF] md:flex md:px-6 md:py-[22px] lg:px-8">
         <CSSTransition
           in={showTypewriter}
@@ -54,9 +54,11 @@ function App() {
                     .start();
                 }}
                 options={{
+                  cursor: "​●",
                   loop: false,
                   delay: 50,
                   deleteSpeed: Infinity,
+                  cursorClassName: "text-[white] ml-2",
                 }}
               />
             )}
