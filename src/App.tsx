@@ -41,23 +41,25 @@ function App() {
             ref={nodeRef}
             className="flex flex-col text-[32px] leading-[1.2] md:text-[40px]"
           >
-              <Typewriter
-                key={messageIndex}
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString(messages[messageIndex])
-                    .pauseFor(1500)
-                    .callFunction(() => {
-                      setTypingDone(true);
-                    })
-                    .start();
-                }}
-                options={{
-                  loop: false,
-                  delay: 50,
-                  deleteSpeed: Infinity,
-                }}
-              />
+            <Typewriter
+              key={messageIndex}
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString(messages[messageIndex])
+                  .pauseFor(1500)
+                  .callFunction(() => {
+                    setTypingDone(true);
+                  })
+                  .start();
+              }}
+              options={{
+                loop: false,
+                delay: 50,
+                deleteSpeed: Infinity,
+                cursor: "●",
+                cursorClassName: "ml-2",
+              }}
+            />
           </div>
         </CSSTransition>
       </div>
